@@ -16,3 +16,12 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+$router->group(['prefix' => 'api/users'], function () use ($router) {
+    $router->get('me', 'UserController@me');
+    $router->post('login', 'UserController@login');
+    $router->get('logout', 'UserController@logout');
+    $router->post('create', 'UserController@create');
+    $router->put('update', 'UserController@update');
+    $router->put('updatePassword', 'UserController@updatePassword');
+});
