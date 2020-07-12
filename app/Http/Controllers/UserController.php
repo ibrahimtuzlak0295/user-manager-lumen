@@ -49,7 +49,7 @@ class UserController extends Controller
     public function updatePassword(Request $request)
     {
         $this->validate($request, [
-            'password_old' => 'required|string|min:3',
+            'password_old' => 'required|string',
             'password_new' => 'required|string|min:3|confirmed',
             'password_new_confirmation' => 'required|string|min:3'
         ]);
