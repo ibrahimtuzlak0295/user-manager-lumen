@@ -1,4 +1,6 @@
-# Installation
+# user-manager-lumen
+
+## Installation
 
 ```shell
 $ composer install
